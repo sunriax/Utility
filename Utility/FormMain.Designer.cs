@@ -66,8 +66,16 @@
 			this.linkLabelWeb = new System.Windows.Forms.LinkLabel();
 			this.labelVersionNr = new System.Windows.Forms.Label();
 			this.pictureBoxBanner = new System.Windows.Forms.PictureBox();
+			this.wirelessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.progressBar1 = new System.Windows.Forms.ProgressBar();
+			this.groupBoxPlatform = new System.Windows.Forms.GroupBox();
+			this.labelPlatformConnection = new System.Windows.Forms.Label();
+			this.labelPlatformBoard = new System.Windows.Forms.Label();
+			this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.waveformToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStripMain.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxBanner)).BeginInit();
+			this.groupBoxPlatform.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// menuStripMain
@@ -76,6 +84,7 @@
             this.startToolStripMenuItem,
             this.modulToolStripMenuItem,
             this.analyseToolStripMenuItem,
+            this.toolsToolStripMenuItem,
             this.platformToolStripMenuItem,
             this.helpToolStripMenuItem});
 			resources.ApplyResources(this.menuStripMain, "menuStripMain");
@@ -151,7 +160,8 @@
 			// 
 			this.modulToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.memoryToolStripMenuItem,
-            this.displayToolStripMenuItem});
+            this.displayToolStripMenuItem,
+            this.wirelessToolStripMenuItem});
 			this.modulToolStripMenuItem.Image = global::Utility.ResourceIcon.Processor;
 			this.modulToolStripMenuItem.Name = "modulToolStripMenuItem";
 			resources.ApplyResources(this.modulToolStripMenuItem, "modulToolStripMenuItem");
@@ -326,10 +336,55 @@
 			this.pictureBoxBanner.Name = "pictureBoxBanner";
 			this.pictureBoxBanner.TabStop = false;
 			// 
+			// wirelessToolStripMenuItem
+			// 
+			this.wirelessToolStripMenuItem.Image = global::Utility.ResourceIcon.Cloud_16xLG;
+			this.wirelessToolStripMenuItem.Name = "wirelessToolStripMenuItem";
+			resources.ApplyResources(this.wirelessToolStripMenuItem, "wirelessToolStripMenuItem");
+			// 
+			// progressBar1
+			// 
+			resources.ApplyResources(this.progressBar1, "progressBar1");
+			this.progressBar1.Name = "progressBar1";
+			// 
+			// groupBoxPlatform
+			// 
+			this.groupBoxPlatform.Controls.Add(this.labelPlatformBoard);
+			this.groupBoxPlatform.Controls.Add(this.labelPlatformConnection);
+			this.groupBoxPlatform.Controls.Add(this.progressBar1);
+			resources.ApplyResources(this.groupBoxPlatform, "groupBoxPlatform");
+			this.groupBoxPlatform.Name = "groupBoxPlatform";
+			this.groupBoxPlatform.TabStop = false;
+			// 
+			// labelPlatformConnection
+			// 
+			resources.ApplyResources(this.labelPlatformConnection, "labelPlatformConnection");
+			this.labelPlatformConnection.Name = "labelPlatformConnection";
+			// 
+			// labelPlatformBoard
+			// 
+			resources.ApplyResources(this.labelPlatformBoard, "labelPlatformBoard");
+			this.labelPlatformBoard.Name = "labelPlatformBoard";
+			// 
+			// toolsToolStripMenuItem
+			// 
+			this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.waveformToolStripMenuItem});
+			this.toolsToolStripMenuItem.Image = global::Utility.ResourceIcon.Hammer_Builder_16xLG;
+			this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+			resources.ApplyResources(this.toolsToolStripMenuItem, "toolsToolStripMenuItem");
+			// 
+			// waveformToolStripMenuItem
+			// 
+			this.waveformToolStripMenuItem.Image = global::Utility.ResourceIcon.Binary_16xLG;
+			this.waveformToolStripMenuItem.Name = "waveformToolStripMenuItem";
+			resources.ApplyResources(this.waveformToolStripMenuItem, "waveformToolStripMenuItem");
+			// 
 			// FormMain
 			// 
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.groupBoxPlatform);
 			this.Controls.Add(this.labelVersionNr);
 			this.Controls.Add(this.linkLabelWeb);
 			this.Controls.Add(this.labelVersion);
@@ -340,6 +395,8 @@
 			this.menuStripMain.ResumeLayout(false);
 			this.menuStripMain.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxBanner)).EndInit();
+			this.groupBoxPlatform.ResumeLayout(false);
+			this.groupBoxPlatform.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -384,6 +441,13 @@
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
 		private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+		private System.Windows.Forms.ToolStripMenuItem wirelessToolStripMenuItem;
+		private System.Windows.Forms.ProgressBar progressBar1;
+		private System.Windows.Forms.GroupBox groupBoxPlatform;
+		private System.Windows.Forms.Label labelPlatformBoard;
+		private System.Windows.Forms.Label labelPlatformConnection;
+		private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem waveformToolStripMenuItem;
 	}
 }
 

@@ -86,7 +86,7 @@ namespace Utility
 			{
 				platform = 1;
 
-				if(STK500ToolStripMenuItem.Image == null)
+				if (STK500ToolStripMenuItem.Image == null)
 				{
 					STK500ToolStripMenuItem.Image = ResourceIcon.Symbols_Complete_and_ok_16xLG;
 					raspberryPIToolStripMenuItem.Image = null;
@@ -116,8 +116,8 @@ namespace Utility
 					basys3ToolStripMenuItem.Image = null;
 				}
 			}
-			
-			else if(menudata.Name == basys3ToolStripMenuItem.Name)
+
+			else if (menudata.Name == basys3ToolStripMenuItem.Name)
 			{
 				platform = 3;
 
@@ -143,7 +143,7 @@ namespace Utility
 				basys3ToolStripMenuItem.Image = null;
 			}
 
-			
+
 
 
 		}
