@@ -44,39 +44,40 @@
 			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
 			this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.groupBoxSettings = new System.Windows.Forms.GroupBox();
-			this.progressBar1 = new System.Windows.Forms.ProgressBar();
-			this.label4 = new System.Windows.Forms.Label();
-			this.button2 = new System.Windows.Forms.Button();
+			this.progressBarSetup = new System.Windows.Forms.ProgressBar();
+			this.labelFrequency = new System.Windows.Forms.Label();
+			this.buttonDisable = new System.Windows.Forms.Button();
 			this.label3 = new System.Windows.Forms.Label();
-			this.button1 = new System.Windows.Forms.Button();
-			this.label2 = new System.Windows.Forms.Label();
-			this.textBox2 = new System.Windows.Forms.TextBox();
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.label1 = new System.Windows.Forms.Label();
-			this.trackBar2 = new System.Windows.Forms.TrackBar();
-			this.trackBar1 = new System.Windows.Forms.TrackBar();
+			this.buttonEnable = new System.Windows.Forms.Button();
+			this.labelAmplitude = new System.Windows.Forms.Label();
+			this.textBoxAmplitude = new System.Windows.Forms.TextBox();
+			this.textBoxOffset = new System.Windows.Forms.TextBox();
+			this.labelOffset = new System.Windows.Forms.Label();
+			this.trackBarAmplitude = new System.Windows.Forms.TrackBar();
+			this.trackBarOffset = new System.Windows.Forms.TrackBar();
 			this.buttonSetup = new System.Windows.Forms.Button();
 			this.comboBoxUnit = new System.Windows.Forms.ComboBox();
-			this.textBoxSignal = new System.Windows.Forms.TextBox();
+			this.textBoxFrequencySetup = new System.Windows.Forms.TextBox();
 			this.textBoxFrequency = new System.Windows.Forms.TextBox();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
+			this.comboBoxSignal = new System.Windows.Forms.ComboBox();
 			this.trackBarFrequency = new System.Windows.Forms.TrackBar();
 			this.labelVersionNr = new System.Windows.Forms.Label();
 			this.linkLabelWeb = new System.Windows.Forms.LinkLabel();
 			this.labelVersion = new System.Windows.Forms.Label();
 			this.pictureBoxBanner = new System.Windows.Forms.PictureBox();
 			this.listViewQueue = new System.Windows.Forms.ListView();
-			this.labelLastSetting = new System.Windows.Forms.Label();
-			this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.Id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.Frequency = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.Amplitude = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.Offset = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.labelLastSettings = new System.Windows.Forms.Label();
 			this.checkBoxDebug = new System.Windows.Forms.CheckBox();
+			this.Wave = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxWave)).BeginInit();
 			this.menuStripMain.SuspendLayout();
 			this.groupBoxSettings.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.trackBarAmplitude)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.trackBarOffset)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.trackBarFrequency)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxBanner)).BeginInit();
 			this.SuspendLayout();
@@ -119,12 +120,14 @@
 			// 
 			// saveToolStripMenuItem
 			// 
+			this.saveToolStripMenuItem.Image = global::WaveUtility.ResourceIcon.save_16xLG;
 			this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
 			this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.saveToolStripMenuItem.Text = "Speichern";
 			// 
 			// openToolStripMenuItem
 			// 
+			this.openToolStripMenuItem.Image = global::WaveUtility.ResourceIcon.folder_Closed_16xLG;
 			this.openToolStripMenuItem.Name = "openToolStripMenuItem";
 			this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.openToolStripMenuItem.Text = "Öffnen";
@@ -136,6 +139,7 @@
 			// 
 			// printToolStripMenuItem
 			// 
+			this.printToolStripMenuItem.Image = global::WaveUtility.ResourceIcon.printer_16xLG;
 			this.printToolStripMenuItem.Name = "printToolStripMenuItem";
 			this.printToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.printToolStripMenuItem.Text = "Drucken";
@@ -147,6 +151,7 @@
 			// 
 			// quitToolStripMenuItem
 			// 
+			this.quitToolStripMenuItem.Image = global::WaveUtility.ResourceIcon.action_Cancel_16xLG;
 			this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
 			this.quitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.quitToolStripMenuItem.Text = "Beenden";
@@ -166,44 +171,44 @@
 			// versionToolStripMenuItem
 			// 
 			this.versionToolStripMenuItem.Name = "versionToolStripMenuItem";
-			this.versionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.versionToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
 			this.versionToolStripMenuItem.Text = "Version";
 			// 
 			// githubToolStripMenuItem
 			// 
 			this.githubToolStripMenuItem.Name = "githubToolStripMenuItem";
-			this.githubToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.githubToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
 			this.githubToolStripMenuItem.Text = "Github";
 			// 
 			// toolStripSeparator3
 			// 
 			this.toolStripSeparator3.Name = "toolStripSeparator3";
-			this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
+			this.toolStripSeparator3.Size = new System.Drawing.Size(139, 6);
 			// 
 			// updateToolStripMenuItem
 			// 
 			this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-			this.updateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.updateToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
 			this.updateToolStripMenuItem.Text = "Aktualisieren";
 			// 
 			// groupBoxSettings
 			// 
-			this.groupBoxSettings.Controls.Add(this.progressBar1);
-			this.groupBoxSettings.Controls.Add(this.label4);
-			this.groupBoxSettings.Controls.Add(this.button2);
+			this.groupBoxSettings.Controls.Add(this.progressBarSetup);
+			this.groupBoxSettings.Controls.Add(this.labelFrequency);
+			this.groupBoxSettings.Controls.Add(this.buttonDisable);
 			this.groupBoxSettings.Controls.Add(this.label3);
-			this.groupBoxSettings.Controls.Add(this.button1);
-			this.groupBoxSettings.Controls.Add(this.label2);
-			this.groupBoxSettings.Controls.Add(this.textBox2);
-			this.groupBoxSettings.Controls.Add(this.textBox1);
-			this.groupBoxSettings.Controls.Add(this.label1);
-			this.groupBoxSettings.Controls.Add(this.trackBar2);
-			this.groupBoxSettings.Controls.Add(this.trackBar1);
+			this.groupBoxSettings.Controls.Add(this.buttonEnable);
+			this.groupBoxSettings.Controls.Add(this.labelAmplitude);
+			this.groupBoxSettings.Controls.Add(this.textBoxAmplitude);
+			this.groupBoxSettings.Controls.Add(this.textBoxOffset);
+			this.groupBoxSettings.Controls.Add(this.labelOffset);
+			this.groupBoxSettings.Controls.Add(this.trackBarAmplitude);
+			this.groupBoxSettings.Controls.Add(this.trackBarOffset);
 			this.groupBoxSettings.Controls.Add(this.buttonSetup);
 			this.groupBoxSettings.Controls.Add(this.comboBoxUnit);
-			this.groupBoxSettings.Controls.Add(this.textBoxSignal);
+			this.groupBoxSettings.Controls.Add(this.textBoxFrequencySetup);
 			this.groupBoxSettings.Controls.Add(this.textBoxFrequency);
-			this.groupBoxSettings.Controls.Add(this.comboBox1);
+			this.groupBoxSettings.Controls.Add(this.comboBoxSignal);
 			this.groupBoxSettings.Controls.Add(this.trackBarFrequency);
 			this.groupBoxSettings.Location = new System.Drawing.Point(317, 28);
 			this.groupBoxSettings.Name = "groupBoxSettings";
@@ -212,30 +217,30 @@
 			this.groupBoxSettings.TabStop = false;
 			this.groupBoxSettings.Text = "Einstellungen";
 			// 
-			// progressBar1
+			// progressBarSetup
 			// 
-			this.progressBar1.Location = new System.Drawing.Point(152, 164);
-			this.progressBar1.Name = "progressBar1";
-			this.progressBar1.Size = new System.Drawing.Size(90, 22);
-			this.progressBar1.TabIndex = 18;
+			this.progressBarSetup.Location = new System.Drawing.Point(152, 194);
+			this.progressBarSetup.Name = "progressBarSetup";
+			this.progressBarSetup.Size = new System.Drawing.Size(90, 21);
+			this.progressBarSetup.TabIndex = 18;
 			// 
-			// label4
+			// labelFrequency
 			// 
-			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(52, 43);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(51, 13);
-			this.label4.TabIndex = 17;
-			this.label4.Text = "Frequenz";
+			this.labelFrequency.AutoSize = true;
+			this.labelFrequency.Location = new System.Drawing.Point(52, 43);
+			this.labelFrequency.Name = "labelFrequency";
+			this.labelFrequency.Size = new System.Drawing.Size(51, 13);
+			this.labelFrequency.TabIndex = 17;
+			this.labelFrequency.Text = "Frequenz";
 			// 
-			// button2
+			// buttonDisable
 			// 
-			this.button2.Location = new System.Drawing.Point(88, 193);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(55, 23);
-			this.button2.TabIndex = 16;
-			this.button2.Text = "Aus";
-			this.button2.UseVisualStyleBackColor = true;
+			this.buttonDisable.Location = new System.Drawing.Point(88, 193);
+			this.buttonDisable.Name = "buttonDisable";
+			this.buttonDisable.Size = new System.Drawing.Size(55, 23);
+			this.buttonDisable.TabIndex = 16;
+			this.buttonDisable.Text = "Aus";
+			this.buttonDisable.UseVisualStyleBackColor = true;
 			// 
 			// label3
 			// 
@@ -246,67 +251,73 @@
 			this.label3.TabIndex = 15;
 			this.label3.Text = "/";
 			// 
-			// button1
+			// buttonEnable
 			// 
-			this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-			this.button1.Location = new System.Drawing.Point(7, 193);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(55, 23);
-			this.button1.TabIndex = 14;
-			this.button1.Text = "Ein";
-			this.button1.UseVisualStyleBackColor = false;
+			this.buttonEnable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+			this.buttonEnable.Location = new System.Drawing.Point(7, 193);
+			this.buttonEnable.Name = "buttonEnable";
+			this.buttonEnable.Size = new System.Drawing.Size(55, 23);
+			this.buttonEnable.TabIndex = 14;
+			this.buttonEnable.Text = "Ein";
+			this.buttonEnable.UseVisualStyleBackColor = false;
 			// 
-			// label2
+			// labelAmplitude
 			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(190, 23);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(53, 13);
-			this.label2.TabIndex = 13;
-			this.label2.Text = "Amplitude";
+			this.labelAmplitude.AutoSize = true;
+			this.labelAmplitude.Location = new System.Drawing.Point(190, 23);
+			this.labelAmplitude.Name = "labelAmplitude";
+			this.labelAmplitude.Size = new System.Drawing.Size(53, 13);
+			this.labelAmplitude.TabIndex = 13;
+			this.labelAmplitude.Text = "Amplitude";
 			// 
-			// textBox2
+			// textBoxAmplitude
 			// 
-			this.textBox2.Location = new System.Drawing.Point(200, 137);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(42, 20);
-			this.textBox2.TabIndex = 12;
-			this.textBox2.Text = "5";
-			this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.textBoxAmplitude.Location = new System.Drawing.Point(200, 164);
+			this.textBoxAmplitude.Name = "textBoxAmplitude";
+			this.textBoxAmplitude.Size = new System.Drawing.Size(42, 20);
+			this.textBoxAmplitude.TabIndex = 12;
+			this.textBoxAmplitude.Text = "2,5";
+			this.textBoxAmplitude.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
-			// textBox1
+			// textBoxOffset
 			// 
-			this.textBox1.Location = new System.Drawing.Point(152, 137);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(42, 20);
-			this.textBox1.TabIndex = 11;
-			this.textBox1.Text = "0";
-			this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.textBoxOffset.Location = new System.Drawing.Point(152, 164);
+			this.textBoxOffset.Name = "textBoxOffset";
+			this.textBoxOffset.Size = new System.Drawing.Size(42, 20);
+			this.textBoxOffset.TabIndex = 11;
+			this.textBoxOffset.Text = "0";
+			this.textBoxOffset.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
-			// label1
+			// labelOffset
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(149, 23);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(35, 13);
-			this.label1.TabIndex = 10;
-			this.label1.Text = "Offset";
+			this.labelOffset.AutoSize = true;
+			this.labelOffset.Location = new System.Drawing.Point(149, 23);
+			this.labelOffset.Name = "labelOffset";
+			this.labelOffset.Size = new System.Drawing.Size(35, 13);
+			this.labelOffset.TabIndex = 10;
+			this.labelOffset.Text = "Offset";
 			// 
-			// trackBar2
+			// trackBarAmplitude
 			// 
-			this.trackBar2.Location = new System.Drawing.Point(200, 54);
-			this.trackBar2.Name = "trackBar2";
-			this.trackBar2.Orientation = System.Windows.Forms.Orientation.Vertical;
-			this.trackBar2.Size = new System.Drawing.Size(45, 77);
-			this.trackBar2.TabIndex = 9;
+			this.trackBarAmplitude.LargeChange = 10;
+			this.trackBarAmplitude.Location = new System.Drawing.Point(200, 54);
+			this.trackBarAmplitude.Maximum = 100;
+			this.trackBarAmplitude.Name = "trackBarAmplitude";
+			this.trackBarAmplitude.Orientation = System.Windows.Forms.Orientation.Vertical;
+			this.trackBarAmplitude.Size = new System.Drawing.Size(45, 104);
+			this.trackBarAmplitude.TabIndex = 9;
+			this.trackBarAmplitude.Value = 50;
 			// 
-			// trackBar1
+			// trackBarOffset
 			// 
-			this.trackBar1.Location = new System.Drawing.Point(149, 54);
-			this.trackBar1.Name = "trackBar1";
-			this.trackBar1.Orientation = System.Windows.Forms.Orientation.Vertical;
-			this.trackBar1.Size = new System.Drawing.Size(45, 77);
-			this.trackBar1.TabIndex = 8;
+			this.trackBarOffset.LargeChange = 10;
+			this.trackBarOffset.Location = new System.Drawing.Point(149, 54);
+			this.trackBarOffset.Maximum = 50;
+			this.trackBarOffset.Minimum = -50;
+			this.trackBarOffset.Name = "trackBarOffset";
+			this.trackBarOffset.Orientation = System.Windows.Forms.Orientation.Vertical;
+			this.trackBarOffset.Size = new System.Drawing.Size(45, 104);
+			this.trackBarOffset.TabIndex = 8;
 			// 
 			// buttonSetup
 			// 
@@ -330,13 +341,15 @@
 			this.comboBoxUnit.Size = new System.Drawing.Size(58, 21);
 			this.comboBoxUnit.TabIndex = 5;
 			// 
-			// textBoxSignal
+			// textBoxFrequencySetup
 			// 
-			this.textBoxSignal.Location = new System.Drawing.Point(7, 20);
-			this.textBoxSignal.Name = "textBoxSignal";
-			this.textBoxSignal.Size = new System.Drawing.Size(136, 20);
-			this.textBoxSignal.TabIndex = 4;
-			this.textBoxSignal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.textBoxFrequencySetup.Location = new System.Drawing.Point(7, 20);
+			this.textBoxFrequencySetup.Name = "textBoxFrequencySetup";
+			this.textBoxFrequencySetup.ReadOnly = true;
+			this.textBoxFrequencySetup.Size = new System.Drawing.Size(136, 20);
+			this.textBoxFrequencySetup.TabIndex = 4;
+			this.textBoxFrequencySetup.Text = "---";
+			this.textBoxFrequencySetup.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// textBoxFrequency
 			// 
@@ -347,25 +360,28 @@
 			this.textBoxFrequency.Text = "100";
 			this.textBoxFrequency.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
-			// comboBox1
+			// comboBoxSignal
 			// 
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Items.AddRange(new object[] {
+			this.comboBoxSignal.FormattingEnabled = true;
+			this.comboBoxSignal.Items.AddRange(new object[] {
             "Rechteck",
             "Sägezahn",
             "Dreieck",
             "Sinus"});
-			this.comboBox1.Location = new System.Drawing.Point(7, 137);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(136, 21);
-			this.comboBox1.TabIndex = 1;
+			this.comboBoxSignal.Location = new System.Drawing.Point(7, 137);
+			this.comboBoxSignal.Name = "comboBoxSignal";
+			this.comboBoxSignal.Size = new System.Drawing.Size(136, 21);
+			this.comboBoxSignal.TabIndex = 1;
 			// 
 			// trackBarFrequency
 			// 
+			this.trackBarFrequency.LargeChange = 10;
 			this.trackBarFrequency.Location = new System.Drawing.Point(7, 59);
+			this.trackBarFrequency.Maximum = 1000;
 			this.trackBarFrequency.Name = "trackBarFrequency";
 			this.trackBarFrequency.Size = new System.Drawing.Size(136, 45);
 			this.trackBarFrequency.TabIndex = 0;
+			this.trackBarFrequency.Value = 100;
 			// 
 			// labelVersionNr
 			// 
@@ -412,24 +428,47 @@
 			// listViewQueue
 			// 
 			this.listViewQueue.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
+            this.Id,
+            this.Wave,
+            this.Frequency,
+            this.Amplitude,
+            this.Offset});
+			this.listViewQueue.FullRowSelect = true;
+			this.listViewQueue.HideSelection = false;
 			this.listViewQueue.Location = new System.Drawing.Point(12, 282);
+			this.listViewQueue.MultiSelect = false;
 			this.listViewQueue.Name = "listViewQueue";
 			this.listViewQueue.Size = new System.Drawing.Size(300, 68);
-			this.listViewQueue.TabIndex = 9;
+			this.listViewQueue.TabIndex = 1;
 			this.listViewQueue.UseCompatibleStateImageBehavior = false;
+			this.listViewQueue.View = System.Windows.Forms.View.Details;
 			// 
-			// labelLastSetting
+			// Id
 			// 
-			this.labelLastSetting.AutoSize = true;
-			this.labelLastSetting.Location = new System.Drawing.Point(12, 266);
-			this.labelLastSetting.Name = "labelLastSetting";
-			this.labelLastSetting.Size = new System.Drawing.Size(102, 13);
-			this.labelLastSetting.TabIndex = 19;
-			this.labelLastSetting.Text = "Letzte Einstellungen";
+			this.Id.Text = "Id";
+			this.Id.Width = 37;
+			// 
+			// Frequency
+			// 
+			this.Frequency.Text = "Frequenz";
+			// 
+			// Amplitude
+			// 
+			this.Amplitude.Text = "Amplitude";
+			// 
+			// Offset
+			// 
+			this.Offset.Text = "Offset";
+			this.Offset.Width = 50;
+			// 
+			// labelLastSettings
+			// 
+			this.labelLastSettings.AutoSize = true;
+			this.labelLastSettings.Location = new System.Drawing.Point(12, 266);
+			this.labelLastSettings.Name = "labelLastSettings";
+			this.labelLastSettings.Size = new System.Drawing.Size(102, 13);
+			this.labelLastSettings.TabIndex = 19;
+			this.labelLastSettings.Text = "Letzte Einstellungen";
 			// 
 			// checkBoxDebug
 			// 
@@ -441,13 +480,18 @@
 			this.checkBoxDebug.Text = "Debug Modus";
 			this.checkBoxDebug.UseVisualStyleBackColor = true;
 			// 
+			// Wave
+			// 
+			this.Wave.Text = "Signal";
+			this.Wave.Width = 62;
+			// 
 			// FormMain
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(584, 361);
 			this.Controls.Add(this.checkBoxDebug);
-			this.Controls.Add(this.labelLastSetting);
+			this.Controls.Add(this.labelLastSettings);
 			this.Controls.Add(this.listViewQueue);
 			this.Controls.Add(this.labelVersionNr);
 			this.Controls.Add(this.linkLabelWeb);
@@ -465,8 +509,8 @@
 			this.menuStripMain.PerformLayout();
 			this.groupBoxSettings.ResumeLayout(false);
 			this.groupBoxSettings.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.trackBarAmplitude)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.trackBarOffset)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.trackBarFrequency)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxBanner)).EndInit();
 			this.ResumeLayout(false);
@@ -492,33 +536,34 @@
 		private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
 		private System.Windows.Forms.GroupBox groupBoxSettings;
 		private System.Windows.Forms.TrackBar trackBarFrequency;
-		private System.Windows.Forms.ComboBox comboBox1;
+		private System.Windows.Forms.ComboBox comboBoxSignal;
 		private System.Windows.Forms.TextBox textBoxFrequency;
-		private System.Windows.Forms.TextBox textBoxSignal;
+		private System.Windows.Forms.TextBox textBoxFrequencySetup;
 		private System.Windows.Forms.ComboBox comboBoxUnit;
 		private System.Windows.Forms.Button buttonSetup;
-		private System.Windows.Forms.TrackBar trackBar2;
-		private System.Windows.Forms.TrackBar trackBar1;
-		private System.Windows.Forms.TextBox textBox2;
-		private System.Windows.Forms.TextBox textBox1;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.TrackBar trackBarAmplitude;
+		private System.Windows.Forms.TrackBar trackBarOffset;
+		private System.Windows.Forms.TextBox textBoxAmplitude;
+		private System.Windows.Forms.TextBox textBoxOffset;
+		private System.Windows.Forms.Label labelOffset;
+		private System.Windows.Forms.Label labelAmplitude;
+		private System.Windows.Forms.Button buttonEnable;
+		private System.Windows.Forms.Button buttonDisable;
 		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.ProgressBar progressBar1;
+		private System.Windows.Forms.Label labelFrequency;
+		private System.Windows.Forms.ProgressBar progressBarSetup;
 		private System.Windows.Forms.Label labelVersionNr;
 		private System.Windows.Forms.LinkLabel linkLabelWeb;
 		private System.Windows.Forms.Label labelVersion;
 		private System.Windows.Forms.PictureBox pictureBoxBanner;
 		private System.Windows.Forms.ListView listViewQueue;
-		private System.Windows.Forms.Label labelLastSetting;
-		private System.Windows.Forms.ColumnHeader columnHeader1;
-		private System.Windows.Forms.ColumnHeader columnHeader2;
-		private System.Windows.Forms.ColumnHeader columnHeader3;
-		private System.Windows.Forms.ColumnHeader columnHeader4;
+		private System.Windows.Forms.Label labelLastSettings;
+		private System.Windows.Forms.ColumnHeader Id;
+		private System.Windows.Forms.ColumnHeader Frequency;
+		private System.Windows.Forms.ColumnHeader Amplitude;
+		private System.Windows.Forms.ColumnHeader Offset;
 		private System.Windows.Forms.CheckBox checkBoxDebug;
+		private System.Windows.Forms.ColumnHeader Wave;
 	}
 }
 
